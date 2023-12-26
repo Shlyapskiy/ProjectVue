@@ -2,34 +2,33 @@
   <div id="app">
     <Header />
     <router-view />
+    <Sidebar />
     <Footer />
   </div>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
 </template>
+<script>
+import Header from './components/AppHeader.vue'
+import Sidebar from './components/SidebarMenu.vue'
+import Footer from './components/AppFooter.vue'
+
+export default {
+  components: {
+    Header,
+    Sidebar,
+    Footer
+  }
+}
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
+  margin-top: 1px
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+#app img {
+  max-width: 300%;
+  margin: 1px;
 }
 </style>
